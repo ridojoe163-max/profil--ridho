@@ -1,101 +1,549 @@
+
+
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Ridho</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profil Ridho Joewandilnata</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            color: #222;
-        }
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-        .container {
-            max-width: 700px;
-            margin: 50px auto;
-            padding: 30px;
-            background: white;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-        }
+html {
+  scroll-behavior: smooth;
+}
 
-        h1 {
-            margin-bottom: 10px;
-        }
+body {
+  font-family: Arial, sans-serif;
+  background: #07111f;
+  color: white;
+  line-height: 1.7;
+}
 
-        h2 {
-            color: #555;
-            font-weight: normal;
-        }
+/* NAVIGASI */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #07111fee;
+  border-bottom: 1px solid #18324f;
+  padding: 14px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-        p {
-            font-size: 17px;
-            line-height: 1.6;
-        }
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #58a6ff;
+}
 
-        .info {
-            text-align: left;
-            margin-top: 25px;
-        }
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 16px;
+  font-size: 14px;
+}
 
-        .social {
-            margin-top: 25px;
-        }
+nav a:hover {
+  color: #58a6ff;
+}
 
-        .social a {
-            display: inline-block;
-            margin: 5px;
-            padding: 10px 18px;
-            background: #222;
-            color: white;
-            text-decoration: none;
-            border-radius: 10px;
-        }
+/* BERANDA */
+.hero {
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+  padding: 70px 8%;
+  background: radial-gradient(
+    circle at top right,
+    #12365c,
+    #07111f 55%
+  );
+}
 
-        footer {
-            margin-top: 30px;
-            color: #777;
-            font-size: 14px;
-        }
-    </style>
+.hero-content {
+  max-width: 850px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 7px 14px;
+  border: 1px solid #245b91;
+  border-radius: 30px;
+  color: #9ccaff;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 7vw, 72px);
+  line-height: 1.1;
+  margin-bottom: 18px;
+}
+
+.hero h1 span {
+  color: #58a6ff;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #c9d6e5;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 28px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  background: #1976d2;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* SECTION */
+section {
+  padding: 75px 8%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-title {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.section-sub {
+  color: #aebdce;
+  margin-bottom: 35px;
+}
+
+/* CARD */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(240px, 1fr)
+  );
+  gap: 20px;
+}
+
+.card {
+  background: #0d1b2d;
+  border: 1px solid #1b3856;
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 12px 30px #0003;
+}
+
+.card h3 {
+  color: #69b0ff;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #d5deea;
+}
+
+/* PROFIL */
+.profile {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 35px;
+  align-items: center;
+}
+
+.avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    #1976d2,
+    #58a6ff
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 62px;
+  font-weight: bold;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.info div {
+  background: #0a1727;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #193650;
+}
+
+.info b {
+  display: block;
+  color: #69b0ff;
+  font-size: 13px;
+}
+
+/* GALERI */
+.gallery {
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px dashed #315b80;
+  border-radius: 18px;
+  background: #0a1727;
+  color: #9fb0c3;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 35px;
+  background: #050c15;
+  color: #9fb0c3;
+  border-top: 1px solid #18324f;
+}
+
+/* HP */
+@media (max-width: 700px) {
+
+  nav {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  nav a {
+    margin: 0 6px;
+    font-size: 12px;
+  }
+
+  .hero {
+    min-height: 75vh;
+    padding: 55px 7%;
+  }
+
+  .profile {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .avatar {
+    margin: auto;
+  }
+
+  .info {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 55px 7%;
+  }
+}
+</style>
 </head>
 
 <body>
 
-<div class="container">
+<!-- NAVIGASI -->
+<nav>
 
-    <h1>Ridho Joewandilnata</h1>
+  <div class="logo">
+    RJ.
+  </div>
 
-    <h2>Profil Pribadi</h2>
+  <div>
+    <a href="#beranda">Beranda</a>
+    <a href="#tentang">Tentang</a>
+    <a href="#pendidikan">Pendidikan</a>
+    <a href="#organisasi">Organisasi</a>
+    <a href="#hobi">Hobi</a>
+    <a href="#galeri">Galeri</a>
+  </div>
+
+</nav>
+
+
+<!-- BERANDA -->
+<header class="hero" id="beranda">
+
+  <div class="hero-content">
+
+    <div class="badge">
+      Website Profil Pribadi
+    </div>
+
+    <h1>
+      Halo, saya
+      <span>Ridho Joewandilnata</span>
+    </h1>
 
     <p>
-        Halo! Saya Ridho Joewandilnata.
-        Selamat datang di website profil pribadi saya.
+      Pelajar kelas XI yang sedang belajar,
+      berkembang, dan aktif mengikuti kegiatan
+      organisasi. Selamat datang di website profil saya.
     </p>
 
-    <div class="info">
-        <p><b>Nama:</b> Ridho Joewandilnata</p>
-        <p><b>Kelas:</b> XI</p>
-        <p><b>Sekolah:</b> MA Al Ma'arif Singosari</p>
+    <a class="btn" href="#tentang">
+      Kenal Saya Lebih Dekat ↓
+    </a>
+
+  </div>
+
+</header>
+
+
+<!-- TENTANG SAYA -->
+<section id="tentang">
+
+  <h2 class="section-title">
+    Tentang Saya
+  </h2>
+
+  <p class="section-sub">
+    Perkenalan singkat tentang saya.
+  </p>
+
+  <div class="profile">
+
+    <!-- FOTO SEMENTARA -->
+    <div class="avatar">
+      RJ
     </div>
 
-    <div class="social">
-        <h3>Media Sosial</h3>
+    <div>
 
-        <a href="#" target="_blank">Instagram</a>
+      <h2>
+        Ridho Joewandilnata
+      </h2>
+
+      <p style="margin:10px 0 22px;color:#d5deea">
+
+        Perkenalkan, nama saya Ridho Joewandilnata.
+        Saya berusia 16 tahun dan lahir di Trenggalek
+        pada 22 Januari 2010.
+
+        Saat ini saya merupakan pelajar di
+        MA Al Ma'arif Singosari dan aktif dalam
+        kegiatan organisasi.
+
+      </p>
+
+      <div class="info">
+
+        <div>
+          <b>Nama</b>
+          <span>Ridho Joewandilnata</span>
+        </div>
+
+        <div>
+          <b>Umur</b>
+          <span>16 tahun</span>
+        </div>
+
+        <div>
+          <b>Tempat, Tanggal Lahir</b>
+          <span>
+            Trenggalek, 22 Januari 2010
+          </span>
+        </div>
+
+        <div>
+          <b>Kelas</b>
+          <span>XI 4</span>
+        </div>
+
+      </div>
+
     </div>
 
-    <footer>
-        © 2026 Ridho Joewandilnata
-    </footer>
+  </div>
 
-</div>
+</section>
+
+
+<!-- PENDIDIKAN -->
+<section id="pendidikan">
+
+  <h2 class="section-title">
+    Pendidikan
+  </h2>
+
+  <p class="section-sub">
+    Pendidikan saya saat ini.
+  </p>
+
+  <div class="card">
+
+    <h3>
+      MA Al Ma'arif Singosari
+    </h3>
+
+    <p>
+      Saat ini saya menempuh pendidikan
+      sebagai siswa kelas XI 4.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- ORGANISASI -->
+<section id="organisasi">
+
+  <h2 class="section-title">
+    Organisasi
+  </h2>
+
+  <p class="section-sub">
+    Kegiatan organisasi yang saya ikuti.
+  </p>
+
+  <div class="grid">
+
+    <div class="card">
+
+      <h3>
+        PK IPNU MA Al Ma'arif Singosari
+      </h3>
+
+      <p>
+        Organisasi pelajar yang saya ikuti
+        di lingkungan sekolah.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <h3>
+        PAC IPNU Kecamatan Lawang
+      </h3>
+
+      <p>
+        Salah satu organisasi yang menjadi
+        bagian dari aktivitas organisasi saya.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- HOBI -->
+<section id="hobi">
+
+  <h2 class="section-title">
+    Hobi
+  </h2>
+
+  <p class="section-sub">
+    Hal yang saya sukai di waktu luang.
+  </p>
+
+  <div class="card">
+
+    <h3>
+      🎵 Mendengarkan Musik
+    </h3>
+
+    <p>
+      Mendengarkan musik merupakan salah satu
+      hobi saya.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- GALERI -->
+<section id="galeri">
+
+  <h2 class="section-title">
+    Galeri
+  </h2>
+
+  <p class="section-sub">
+    Foto bisa ditambahkan nanti.
+  </p>
+
+  <div class="grid">
+
+    <div class="gallery">
+      📷<br>
+      Foto kegiatan 1<br>
+      Tambahkan foto nanti
+    </div>
+
+    <div class="gallery">
+      📷<br>
+      Foto kegiatan 2<br>
+      Tambahkan foto nanti
+    </div>
+
+    <div class="gallery">
+      📷<br>
+      Foto kegiatan 3<br>
+      Tambahkan foto nanti
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- MEDIA SOSIAL -->
+<section id="kontak">
+
+  <h2 class="section-title">
+    Media Sosial
+  </h2>
+
+  <p class="section-sub">
+    Informasi media sosial.
+  </p>
+
+  <div class="card">
+
+    <h3>
+      Instagram
+    </h3>
+
+    <p>
+      Username:
+      <strong>ridho joews</strong>
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+  © 2026 Ridho Joewandilnata —
+  Website Profil Pribadi
+
+</footer>
 
 </body>
-</html>
-
-  
+    </html>  
