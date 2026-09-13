@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profil Ridho Joewandilnata</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#07111f,#12365c,#1b1745);
+color:white;
+line-height:1.7
+}
+nav{
+position:sticky;top:0;z-index:10;
+background:#07111fee;
+padding:15px 6%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid #58a6ff
+}
+.logo{font-size:25px;font-weight:bold;color:#58a6ff}
+nav a{color:white;text-decoration:none;margin-left:12px;font-size:14px}
+nav a:hover{color:#58a6ff}
+
+.hero{
+min-height:80vh;
+display:flex;
+align-items:center;
+padding:70px 8%;
+background:linear-gradient(135deg,#07111f,#174f7a,#39205f)
+}
+.hero h1{font-size:48px;line-height:1.2;margin-bottom:20px}
+.hero h1 span{color:#58a6ff}
+.hero p{font-size:18px;color:#dcecff}
+.badge{
+display:inline-block;
+padding:7px 15px;
+border:1px solid #58a6ff;
+border-radius:30px;
+color:#9dccff;
+margin-bottom:20px
+}
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:12px 20px;
+border-radius:10px;
+background:#1976d2;
+color:white;
+text-decoration:none;
+font-weight:bold
+}
+section{padding:65px 8%;max-width:1200px;margin:auto}
+.section-title{font-size:34px;color:#69b0ff;margin-bottom:10px}
+.section-sub{color:#b8cbe0;margin-bottom:25px}
+.card{
+background:#0d1b2ddd;
+border:1px solid #315b82;
+border-radius:18px;
+padding:25px;
+margin-bottom:20px
+}
+.card h3{color:#69b0ff;margin-bottom:10px}
+.info{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
+margin-top:20px
+}
+.info div{
+background:#091729;
+padding:14px;
+border-radius:12px;
+border:1px solid #234b70
+}
+.info b{display:block;color:#69b0ff}
+
+.profile{
+width:220px;
+height:220px;
+object-fit:cover;
+border-radius:50%;
+border:5px solid #58a6ff;
+display:block;
+margin:0 auto 25px
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px
+}
+.gallery-card{
+background:#0d1b2d;
+border:1px solid #315b82;
+border-radius:18px;
+overflow:hidden
+}
+.gallery-card img{
+width:100%;
+height:230px;
+object-fit:cover;
+display:block
+}
+.gallery-card p{
+padding:15px;
+font-weight:bold
+}
+footer{
+text-align:center;
+padding:35px;
+background:#050c15;
+color:#9fb0c3
+}
+
+@media(max-width:800px){
+nav{flex-direction:column;gap:10px}
+nav a{font-size:12px;margin:0 4px}
+.hero h1{font-size:36px}
+.info{grid-template-columns:1fr}
+.gallery{grid-template-columns:1fr}
+.profile{width:180px;height:180px}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">RJ.</div>
+<div>
+<a href="#beranda">Beranda</a>
+<a href="#tentang">Tentang</a>
+<a href="#pendidikan">Pendidikan</a>
+<a href="#organisasi">Organisasi</a>
+<a href="#hobi">Hobi</a>
+<a href="#galeri">Galeri</a>
+</div>
+</nav>
+
+<header class="hero" id="beranda">
+<div>
+<div class="badge">Website Profil Pribadi</div>
+<h1>Halo, saya<br><span>Ridho Joewandilnata</span></h1>
+<p>Pelajar kelas XI yang aktif belajar dan mengikuti kegiatan organisasi.</p>
+<a class="btn" href="#tentang">Kenal Saya Lebih Dekat ↓</a>
+</div>
+</header>
+
+<section id="tentang">
+<h2 class="section-title">Tentang Saya</h2>
+<p class="section-sub">Perkenalan singkat tentang saya.</p>
+
+<div class="card">
+<img src="foto_profil.jpg" class="profile" alt="Foto Ridho">
+
+<h3>Ridho Joewandilnata</h3>
+<p>
+Perkenalkan, nama saya Ridho Joewandilnata.
+Saya berusia 16 tahun dan lahir di Trenggalek
+pada 22 Januari 2010. Saat ini saya merupakan
+pelajar di MA Al Ma'arif Singosari.
+</p>
+
+<div class="info">
+<div><b>Nama</b>Ridho Joewandilnata</div>
+<div><b>Umur</b>16 tahun</div>
+<div><b>Tempat, Tanggal Lahir</b>Trenggalek, 22 Januari 2010</div>
+<div><b>Kelas</b>XI 4</div>
+</div>
+</div>
+</section>
+
+<section id="pendidikan">
+<h2 class="section-title">Pendidikan</h2>
+<div class="card">
+<h3>MA Al Ma'arif Singosari</h3>
+<p>Saat ini saya menempuh pendidikan sebagai siswa kelas XI 4.</p>
+</div>
+</section>
+
+<section id="organisasi">
+<h2 class="section-title">Organisasi</h2>
+
+<div class="card">
+<h3>PK IPNU MA Al Ma'arif Singosari</h3>
+<p>Organisasi pelajar yang saya ikuti di lingkungan sekolah.</p>
+</div>
+
+<div class="card">
+<h3>Pimpinan Anak Cabang IPNU Kecamatan Lawang</h3>
+<p>Organisasi yang menjadi bagian dari aktivitas organisasi saya.</p>
+</div>
+</section>
+
+<section id="hobi">
+<h2 class="section-title">Hobi</h2>
+<div class="card">
+<h3>🎵 Mendengarkan Musik</h3>
+<p>Mendengarkan musik merupakan salah satu hobi saya.</p>
+</div>
+</section>
+
+<section id="galeri">
+<h2 class="section-title">Galeri Kegiatan</h2>
+<p class="section-sub">Foto-foto kegiatan saya.</p>
+
+<div class="gallery">
+
+<div class="gallery-card">
+<img src="foto_kegiatan_1.jpg" alt="Kegiatan 1">
+<p>Kegiatan 1</p>
+</div>
+
+<div class="gallery-card">
+<img src="foto_kegiatan_2.jpg" alt="Kegiatan 2">
+<p>Kegiatan 2</p>
+</div>
+
+<div class="gallery-card">
+<img src="foto_kegiatan_3.jpg" alt="Kegiatan 3">
+<p>Kegiatan 3</p>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2 class="section-title">Media Sosial</h2>
+<div class="card">
+<h3>Instagram</h3>
+<p>Username: <strong>ridho joews</strong></p>
+</div>
+</section>
+
+<footer>
+© 2026 Ridho Joewandilnata — Website Profil Pribadi
+</footer>
+
+</body>
+  </html>
