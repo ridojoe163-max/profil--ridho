@@ -36,7 +36,26 @@ background:linear-gradient(135deg,#07111f,#174f7a,#39205f)
 }
 .hero h1{font-size:48px;line-height:1.2;margin-bottom:20px}
 .hero h1 span{color:#58a6ff}
-.hero p{font-size:18px;color:#dcecff}
+.hero p{font-size:18px;color:#dcecff}.hero-content{
+display:flex;
+align-items:center;
+gap:40px;
+width:100%;
+}
+
+.hero-profile{
+width:220px;
+height:220px;
+object-fit:cover;
+border-radius:50%;
+border:5px solid #58a6ff;
+flex-shrink:0;
+}
+
+.hero-text{
+flex:1;
+}
+  
 .badge{
 display:inline-block;
 padding:7px 15px;
@@ -132,19 +151,15 @@ nav a{font-size:12px;margin:0 4px}
 <body>
 
 <nav>
-<div class="logo">RJ.</div>
+<div class="logo">Rj.
+  <header class="hero" id="beranda">
 <div>
-<a href="#beranda">Beranda</a>
-<a href="#tentang">Tentang</a>
-<a href="#pendidikan">Pendidikan</a>
-<a href="#organisasi">Organisasi</a>
-<a href="#hobi">Hobi</a>
-<a href="#galeri">Galeri</a>
+<div class="badge">Website Profil Pribadi</div>
+<h1>Halo, saya<br><span>Ridho Joewandinata</span></h1>
+<p>Pelajar kelas XI yang aktif belajar dan mengikuti kegiatan organisasi.</p>
+<a class="btn" href="#tentang">Kenal Saya Lebih Dekat ↓</a>
 </div>
-</nav>
-
-<header class="hero" id="beranda">
-<div>
+  </header>
 <div class="badge">Website Profil Pribadi</div>
 <h1>Halo, saya<br><span>Ridho Joewandinata</span></h1>
 <p>Pelajar kelas XI yang aktif belajar dan mengikuti kegiatan organisasi.</p>
@@ -157,7 +172,7 @@ nav a{font-size:12px;margin:0 4px}
 <p class="section-sub">Perkenalan singkat tentang saya.</p>
 
 <div class="card">
-<img src="foto_profil.jpg" class="profile" alt="Foto Ridho">
+
 
 <h3>Ridho Joewandinata</h3>
 <p>
